@@ -1,17 +1,46 @@
+import { useContext,  } from "react";
 import { Link } from "react-router-dom";
-
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavBar = () => {
+  const { user,loading,logout } = useContext(AuthContext);
 
 
-  const  navOptions=
-<>
-        <li><Link to="/">Home</Link></li>
-       
-        <li><a>Item 3</a></li>
+
+  const handleLogOut = () => {
+    logout()
+      .then(() => {})
+      .catch(error => console.log(error));
+  };
 
 
-</>
+
+
+
+
+
+
+const navOptions = <>
+
+     <li style={{ marginTop: '-1px' }}><Link to="/">Home</Link></li>
+      <li style={{ marginTop: '-1px' }}><Link to="/categoris/Cooking">Categories</Link></li>
+      <li style={{ marginTop: '-1px' }}><Link to="/secret">Secret</Link></li>
+   
+         
+      {loading  ? (
+        <li style={{ marginTop: '-6px' }}><button style={{ fontWeight: 'normal', marginBottom: '2px', padding: '4px 8px', fontSize: '14px' }} onClick={handleLogOut} className="btn btn-ghost">Logout</button></li>
+      ) : user ? (
+        <li style={{ marginTop: '-6px' }}>
+          <button style={{ fontWeight: 'normal', marginBottom: '2px', padding: '4px 8px', fontSize: '14px' }} onClick={handleLogOut} className="btn btn-ghost">Logout</button>
+        </li>
+      ) : (
+        <li><Link to="/login">Login</Link></li>
+      )}
+    </>
+  
+
+
+
     return (
         <>
         <div className="navbar fixed max-w-screen-xl z-10 bg-opacity-30  bg-black text-white">

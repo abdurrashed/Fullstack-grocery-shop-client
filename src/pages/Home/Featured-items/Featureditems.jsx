@@ -2,6 +2,7 @@
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
 import featuredimg from '../../../assets/home/featureitems.jpg'
 import './featuread.css'
+import { Link } from 'react-router-dom';
 
 const Featureditems = () => {
     return (
@@ -17,7 +18,8 @@ const Featureditems = () => {
             <div className='md:ml-10'> 
                     <p className='uppercase'>where can i get some ?</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, mollitia hic velit veniam quam nihil porro saepe laborum exercitationem enim perferendis pariatur ipsam temporibus, repudiandae deleniti voluptatem tenetur explicabo illo reprehenderit. Modi ipsam aliquid alias nihil sunt possimus fugit, accusamus blanditiis molestias pariatur odio quas dolorum adipisci accusantium nesciunt corporis? </p>
-                    <button className="btn btn-outline border-0 border-b-4">Order Now</button>
+                    <Link to="/categoris/Cooking">
+                    <button className="btn btn-outline border-0 border-b-4">Order Now </button></Link>
 
 
             </div>
