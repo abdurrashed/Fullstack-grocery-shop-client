@@ -4,7 +4,7 @@
       "name": "Badhakopi(cabbage)",
       "weight": "each",
       "image": "https://i.ibb.co/Db7fYY1/badhakopi-cabbage-1-pcs.jpg",
-      "price": "55 TK",
+      "price": 55.5 ,
 
       "category": "Fruitsvegetables"
     },
@@ -13,7 +13,7 @@
       "name": "Black Grapes",
       "weight": "25 gm",
       "image": "https://i.ibb.co/Fx7rDDW/black-grapes-250-gm.jpg",
-      "price": "99 TK",
+      "price": 99 ,
       "category": "Fruitsvegetables"
     },
     {
@@ -21,7 +21,7 @@
       "name": "Broccoli",
       "weight": "each",
       "image": "https://i.ibb.co/DVQjg7B/broccoli-1-pcs.jpg",
-      "price": "69 TK",
+      "price": 69 ,
       "category": "Fruitsvegetables"
     },
     {
@@ -29,7 +29,7 @@
       "name": "China Orange",
       "weight": "800 gm",
       "image": "https://i.ibb.co/zsDVkZz/china-orange-40-gm-800-gm.jpg",
-      "price": "269 TK",
+      "price": 269 ,
       "category": "Fruitsvegetables"
     },
     {
@@ -37,7 +37,7 @@
       "name": "kacha Pepe",
       "weight": "1 kg", 
       "image": "https://i.ibb.co/FBJydDt/kacha-pepe-green-papaya-70-gm-14-kg.jpg",
-      "price": "60 TK",
+      "price": 60 ,
       "category": "Fruitsvegetables"
     },
     {
@@ -45,7 +45,7 @@
       "name": "Red Potato",
       "weight": "1 kg",
       "image": "https://i.ibb.co/ZWnS7Tc/lal-alu-red-potato-cardinal-50-gm-1-kg.jpg",
-      "price": "39 TK",
+      "price": 39 ,
       "category": "Fruitsvegetables"
     },
     {
@@ -53,7 +53,7 @@
       "name": "Lomba Lebu",
       "weight": "4 pcs",
       "image": "https://i.ibb.co/x3wkRBg/lomba-lebu-long-lemon-4-pcs.jpg",
-      "price": "55 TK",
+      "price": 55 ,
       "category": "Fruitsvegetables"
     },
     {
@@ -61,7 +61,7 @@
       "name": "Malta",
       "weight": "1 kg",
       "image": "https://i.ibb.co/JtsDJTB/malta-50-gm-1-kg.jpg",
-      "price": "300 TK",
+      "price": 300 ,
       "category": "Fruitsvegetables"
     },
     {
@@ -69,7 +69,7 @@
       "name": "Paka Pape",
       "weight":  "1 kg",
       "image": "https://i.ibb.co/cwY5Vz4/paka-pape-50-gm-thai-1-kg.jpg",
-      "price": "170 TK",
+      "price": 170,
       "category": "Fruitsvegetables"
     },
     {
@@ -77,7 +77,7 @@
       "name": "Banana",
       "weight": "4 pcs",
       "image": "https://i.ibb.co/KLvbh7j/shagor-kola-banana-sagor-4-pcs.jpg",
-      "price": "45 TK",
+      "price": 45 ,
       "category": "Fruitsvegetables"
       
     }

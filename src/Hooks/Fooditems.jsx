@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+
+import useAxiosPublic from "./useAxiosPublic";
 
 
 const Fooditems = () => {
- 
 
+
+    const axiosPublic=useAxiosPublic();
+ 
+/*
 
     const [menu,setItems]=useState([]);
     const [loading,setLoading]=useState(true);
@@ -16,6 +21,7 @@ const Fooditems = () => {
       
       
      })
+     
 
 
         
@@ -25,7 +31,21 @@ const Fooditems = () => {
    
      },[])
 
-     return [menu,loading]
+     */
+
+     const{data:menu=[],refetch}=useQuery({
+
+        queryKey:['menu'],
+        queryFn: async()=>{
+          const res= await axiosPublic.get('/items');
+
+          return res.data;
+
+        }
+     })
+
+
+     return [menu,refetch]
 
 
 

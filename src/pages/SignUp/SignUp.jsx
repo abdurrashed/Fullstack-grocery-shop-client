@@ -5,8 +5,13 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 
 import Swal from 'sweetalert2';
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 const SignUp = () => {
+
+
+    const axiospublic=useAxiosPublic()
     const {
         register,
         handleSubmit,reset,
@@ -31,18 +36,37 @@ const SignUp = () => {
 
              .then(()=>{
 
+                 const userInfo={
+                    name:data.name,
+                    email:data.email
+                
+                  
 
-                console.log('user profile updated')
-                reset();
+                 }
+                axiospublic.post('/users',userInfo)
 
-                Swal.fire({
-                 
-                    icon: "success",
-                    title: "User created successfully.",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-                  navigate('/login')
+                .then(res=>{
+                   if(res.data.insertedId){
+
+                    console.log('user profile updated')
+                    reset();
+    
+                    Swal.fire({
+                     
+                        icon: "success",
+                        title: "User created successfully.",
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+                      navigate('/login')
+
+
+                   }
+
+
+                })
+
+               
              })
 
 
@@ -54,7 +78,7 @@ const SignUp = () => {
             <Helmet>
                 <title>Grocery shop| Sign Up </title>
             </Helmet>
-       g
+       
 
           <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -102,9 +126,11 @@ const SignUp = () => {
                         </div>
                     </form>
 
-                    <p><small>Already have an accounth <Link to="/login">Create an account</Link></small></p>
+                    <p className="px-6"><small>Already have an account <Link to="/login">Login</Link></small></p>
+                    <SocialLogin></SocialLogin>
     
                 </div>
+
             </div>
             </div>
         

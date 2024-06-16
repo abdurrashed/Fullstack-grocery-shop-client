@@ -12,6 +12,7 @@ import { Helmet } from 'react-helmet-async';
 
 
 
+
 const Order = () => {
 
     const categoris=['Baking','Cooking','furitsvegetables','dairyeggs','beverages']
@@ -27,7 +28,7 @@ const Order = () => {
 
     const Cooking=menu.filter(item=>item.category === 'Cooking');
     const Baking=menu.filter(item=>item.category === 'Baking');
-    const DairyEggs=menu.filter(item=>item.category === 'Dairy&Eggs');
+    const DairyEggs=menu.filter(item=>item.category === 'Dairyeggs');
     const Beverages =menu.filter(item=>item.category === 'Beverages');
 
 
@@ -46,6 +47,7 @@ const Order = () => {
                 <title>Grocery shop| Order items </title>
             </Helmet>
             <Cover img={orderCover} title="Order Items"></Cover>
+           
             <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
   <TabList>
     <Tab>Baking</Tab>

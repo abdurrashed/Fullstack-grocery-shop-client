@@ -12,7 +12,7 @@ const Main = () => {
         <div>
          {noHeaderFooter|| <NavBar></NavBar>}
           <Outlet></Outlet>  
-          {noHeaderFooter|| <Footer></Footer>}
+          {noHeaderFooter|| <Footer ></Footer>}
             
         </div>
     );
